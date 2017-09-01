@@ -1,12 +1,12 @@
-<div class="container top-30">
+<div class="container top-30" *ngIf="artista">
   <div class="row">
     <div class="col-md-2">
       <img [src]="artista.images | sinfoto" alt="" class="img-fluid img-circle">
     </div>
     <div class="col-md-10">
-      <h4>{{ artista.name }}</h4>
-      <div class="btn btn-primary">Regresar</div>
-      <div class="btn btn-primary">Abrir en spotify</div>
+      <h4>{{ artista.name }} <small>Popularidad {{ artista.popularity }}</small></h4>
+      <div class="btn btn-primary" [routerLink]="['/buscar']">Regresar</div>
+      <a class="btn btn-primary" [href]="artista.external_urls?.spotify">Abrir en spotify</a>
     </div>
   </div>
   <hr>

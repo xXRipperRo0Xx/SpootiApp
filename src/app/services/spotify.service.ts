@@ -6,8 +6,10 @@ import 'rxjs/add/operator/map';
 export class SpotifyService {
 
   artistas:any [] = [];
+  topTracks:any[] = [];
+  artista:any[]=[];
 
-  tokenAcceso = 'Bearer BQBF68o0MIYGX2bFF_TAXUN-wR9JxaFVrUhpPm0pCBfxIPKgLD-r82Qu2OL4h3OGNB9BH8nHqGZR4Iwb0msWcg';
+  tokenAcceso = 'Bearer BQDtlbC19ztqDMRtrp_tWycMWUKoJUqeGN4hH0_YIo2LIPldYEl1gzGUcTTb2HQCelI9vFbfe5zsYtMz3_pC3w';
 
   urlBusqueda: string = 'https://api.spotify.com/v1/search';
   urlArtista: string = 'https://api.spotify.com/v1/artists'
@@ -39,7 +41,7 @@ export class SpotifyService {
     return this.http.get( url , { headers })
       .map( res => {
         console.log(res.json());
-        return this.artistas = res.json();
+        return this.artista = res.json();
     });
   }
 
@@ -54,7 +56,7 @@ export class SpotifyService {
     return this.http.get( url , { headers })
       .map( res => {
         console.log(res.json().tracks);
-        return this.artistas = res.json().tracks;
+        return this.topTracks = res.json().tracks;
       });
   }
 
