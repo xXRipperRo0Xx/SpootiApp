@@ -9,7 +9,7 @@ export class SpotifyService {
   topTracks:any[] = [];
   artista:any[]=[];
 
-  tokenAcceso = 'Bearer BQDEmTNUGuELXX4h6fttCZ0hJIqK31FfOPWvBcvXq9sgDdaFvh8GP-q4whVLA7xuP2_mOWYA--ix0BHX4rPVYQ';
+  tokenAcceso = 'Bearer BQB-O76tgf31o984Evd5j72-65HEvVLWIRJKa1CXpEs0iFkReJgSjMStmgsFHQ6ogNGgqDyjl1SToqBcXLSUVw';
 
   urlBusqueda: string = 'https://api.spotify.com/v1/search';
   urlArtista: string = 'https://api.spotify.com/v1/artists'
